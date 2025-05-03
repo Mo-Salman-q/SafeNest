@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Resources</title>
+    <link rel="stylesheet" href="/educational.css">
+</head>
+<body>
+    <header>
+        <h1>SafeNest - Resources</h1>
+    </header>
+
+    <section class="resources">
+
+        <h2>Recommended Videos</h2>
+        {{#each videoResults}}
+        <div class="video-card">
+            <h3>{{this.title}}</h3>
+            <a href="https://www.youtube.com/watch?v={{this.videoId}}" target="_blank">
+                <img src="{{this.thumbnail}}" alt="{{this.title}}">
+            </a>
+        </div>
+        {{/each}}
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SafeNest. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
